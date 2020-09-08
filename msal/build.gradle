@@ -148,9 +148,9 @@ dependencies {
         transitive = false
     }
 
-    snapshotApi(group: 'com.microsoft.identity', name: 'common', version: '2.0.15-SNAPSHOT', changing: true)
+    snapshotApi(group: 'com.microsoft.identity', name: 'common', version: '3.0.1-BEESMA-msal-test', changing: true)
 
-    distApi("com.microsoft.identity:common:2.0.15") {
+    distApi("com.microsoft.identity:common:3.0.1-BEESMA-msal-test") {
         transitive = false
     }
 }
@@ -265,6 +265,7 @@ publishing {
 
     // Repositories to which Gradle can publish artifacts
     repositories {
+        mavenLocal()
         maven {
             name "vsts-maven-adal-android"
             url "https://identitydivision.pkgs.visualstudio.com/_packaging/AndroidADAL/maven/v1"
